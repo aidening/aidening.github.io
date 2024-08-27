@@ -4,8 +4,33 @@
     <meta charset="UTF-8" />
     <title>About Me</title>
   </head>
+  <style>
+    .btn-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .other-btn {
+      margin-left: 20px;
+    }
+  </style>
   <body>
-    <h1>About Aiden Xiong</h1>
-    <p>这里是关于我的一些信息...</p>
+    <div class="btn-container">
+      <button onclick="handleClickRegistration">Registration Test Report</button>
+      <button class="other-btn" onclick="handleClickOtherBtn">Other Test Report</button>
+    </div>
   </body>
+
+  <script>
+    function handleClickRegistration() {
+      dataLayer.push({
+        event: 'Registration',
+      });
+      alert('You already clicked the registration test report');
+    }
+
+    function handleClickOtherBtn() {
+      alert('This is a test report, do nothing');
+    }
+  </script>
 </html>
